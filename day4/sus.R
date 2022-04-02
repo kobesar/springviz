@@ -68,7 +68,7 @@ tab <- covid %>%
 side2 <- tab %>% 
   ggplot() +
   geom_bar(aes(x = sus, y = reorder(location, sus), fill = location %in% c("United States", "United Kingdom", "Russia"), alpha = ifelse(location %in% c("United States", "United Kingdom", "Russia"), 1, 0.2)), stat = "identity", width = 0.4) +
-  geom_label_repel(data = tab[tab$location %in% c("United States", "United Kingdom", "Russia"), ], aes(x = sus, y = location, label = location), nudge_x = 0.05) +
+  geom_label_repel(data = tab[tab$location %in% c("United States", "United Kingdom", "Russia"), ], aes(x = sus, y = location, label = location, family = "Source Serif Pro"), nudge_x = 0.05) +
   scale_alpha_identity(aesthetic = "alpha") +
   scale_fill_manual(values = c("#003f5c", "#bc5090")) +
   scale_y_discrete(labels = NULL) +
