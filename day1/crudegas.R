@@ -15,7 +15,7 @@ cons_theme <- theme(
 )
 
 
-API_KEY <- "TSIriKOxJ9uYTbUdjcieeIgkgwLAIXzdHXehW8Y3"
+API_KEY <- "YOUR_API_KEY"
 
 GET(sprintf("https://api.eia.gov/series/?api_key=%s&series_id=PET.EMM_EPM0_PTE_NUS_DPG.W", API_KEY)) %>% 
   content() -> avg_gas 
